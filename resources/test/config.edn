@@ -1,6 +1,6 @@
 {
  :current-date {}
- :datomic {:persistence.datomic/db-name "social-stats-test"
+ :datomic {:persistence.datomic/db-name "pl-stats-test"
            :persistence.datomic/endpoint "datomic:mem://"}
  :messenger-local {:messenger.messenger-local/endpoint "http://localhost:8081/handler"}
  :use-cases {:db #ig/ref :datomic

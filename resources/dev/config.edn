@@ -1,6 +1,6 @@
 {
  :current-date {}
- :datomic {:persistence.datomic/db-name "social-stats"
+ :datomic {:persistence.datomic/db-name "pl-stats"
            :persistence.datomic/endpoint "datomic:mem://"}
  ;; :graph {}
  :telegram {:messenger.telegram/endpoint #env TELEGRAM_ENDPOINT

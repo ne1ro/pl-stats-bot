@@ -19,6 +19,7 @@
                  [org.slf4j/jul-to-slf4j "1.7.14"]
                  [org.slf4j/log4j-over-slf4j "1.7.14"]
                  [ring-logger "1.0.1"]
+                 [ring/ring-jetty-adapter "1.8.0"]
                  [ring/ring-json "0.5.0"]]
   :plugins [[lein-environ "1.1.0"]
             [lein-cljfmt "0.6.4"]
@@ -31,8 +32,7 @@
   :ring {:handler pl-stats-bot.handler/app}
   :profiles {:dev {:resource-paths ["resources/dev"]
                    :dependencies [[lein-cljfmt "0.6.4"]
-                                  [integrant/repl "0.3.1"]
-                                  ]}
+                                  [integrant/repl "0.3.1"]]}
              :test {:resource-paths ["resources/test"]
                     :dependencies [[lein-cloverage "1.1.1"]]}
              :prod {:resource-paths ["resources/prod"]}
