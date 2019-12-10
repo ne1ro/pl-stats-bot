@@ -30,8 +30,10 @@
   :resource-paths ["config", "resources"]
   :ring {:handler pl-stats-bot.handler/app}
   :profiles {:dev {:resource-paths ["resources/dev"]
-                   :dependencies [[lein-cljfmt "0.6.4"]]}
+                   :dependencies [[lein-cljfmt "0.6.4"]
+                                  [integrant/repl "0.3.1"]
+                                  ]}
              :test {:resource-paths ["resources/test"]
                     :dependencies [[lein-cloverage "1.1.1"]]}
              :prod {:resource-paths ["resources/prod"]}
-             :uberjar {:aot [social-stats-bot.core]}})
+             :uberjar {:aot [pl-stats-bot.core]}})
