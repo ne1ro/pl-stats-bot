@@ -1,0 +1,12 @@
+{
+ :current-date {}
+ :datomic {:persistence.datomic/db-name "social-stats-test"
+           :persistence.datomic/endpoint "datomic:mem://"}
+ :messenger-local {:messenger.messenger-local/endpoint "http://localhost:8081/handler"}
+ :use-cases {:db #ig/ref :datomic
+             :current-date #ig/ref :current-date}
+ :web {:web.server/port 8081
+       :web.server/use-cases #ig/ref :use-cases
+       :web.server/messenger #ig/ref :messenger-local
+       :web.server/env :test}
+ }

@@ -1,0 +1,14 @@
+{
+ :current-date {}
+ :datomic {:persistence.datomic/db-name "social-stats"
+           :persistence.datomic/endpoint "datomic:mem://"}
+ ;; :graph {}
+ :telegram {:messenger.telegram/endpoint #env TELEGRAM_ENDPOINT
+            :messenger.telegram/token #env TELEGRAM_TOKEN}
+ :use-cases {:db #ig/ref :datomic
+             :current-date #ig/ref :current-date}
+ :web {:web.server/port 8080
+       :web.server/use-cases #ig/ref :use-cases
+       :web.server/messenger #ig/ref :telegram
+       :web.server/env :prod}
+}
