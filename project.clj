@@ -10,6 +10,7 @@
                  [com.taoensso/timbre "4.10.0"]
                  [compojure "1.6.1"]
                  [dorothy "0.0.7"]
+                 [enlive "1.1.6"]
                  [expound "0.7.2"]
                  [integrant "0.7.0"]
                  [io.aviso/pretty "0.1.37"]
