@@ -1,11 +1,10 @@
 (ns jobs-board-provider.indeed
   "Indeed.com adapter for the jobs provider"
   (:require [net.cgrand.enlive-html :as html]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [pl-stats-bot.jobs-board-provider :refer [JobsBoardProvider]]))
 
-(def url "https://www.indeed.com/jobs")
-
-(defn- fetch-query [query]
+(defn- fetch-query [url query]
   (-> url
       (str "?q=" query "&l=")
       java.net.URL.
@@ -25,4 +24,9 @@
            second
            Integer/parseInt))
 
-(def fetch-pl-stats (comp parse-jobs-count doc->text fetch-query))
+(defrecord IndeedJobsBoardProvider [conf]
+  JobsBoardProvider
+
+  (get-jobs-stats [{url :url} language]
+    (when-let [c (-> url (fetch-query language) doc->text parse-jobs-count)]
+      {language c})))

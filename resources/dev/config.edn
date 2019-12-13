@@ -1,5 +1,6 @@
 {
  :current-date {}
+ :indeed {:jobs-board-provider.indeed/url "https://www.indeed.com/jobs"}
  :datomic {:persistence.datomic/db-name "pl-stats"
            :persistence.datomic/endpoint "datomic:mem://"}
  ;; :graph {}

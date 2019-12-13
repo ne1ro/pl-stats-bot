@@ -4,4 +4,4 @@
 (defprotocol JobsBoardProvider
   "Jobs board actions behaviour"
 
-  (list-jobs-stats [conf search-term] "Returns jobs stats by the searching term"))
+  (get-jobs-stats [conf search-term] "Returns jobs stats by the searching term"))
