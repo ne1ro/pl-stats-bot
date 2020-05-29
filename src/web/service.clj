@@ -5,8 +5,7 @@
             [compojure.core :refer :all]
             [morse.handlers :as h]
             [pl-stats-bot.messenger
-             :refer [send-message send-photo]]
-            [pl-stats-bot.use-cases :refer [PlStatsBot]]))
+             :refer [send-message send-photo]])
 
 (s/def ::messenger map?)
 (s/def ::use-cases map?)
