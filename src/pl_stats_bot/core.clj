@@ -4,8 +4,6 @@
   (:require [integrant.core :as ig]
             [clojure.spec.alpha :as s]
             [clojure.spec.test.alpha :as st]
-            [messenger.telegram]
-            ;; [persistence.datomic]
             [taoensso.timbre :as timbre :refer [info]]
             ;; [pl-stats-bot.use-cases]
             [web.server]))

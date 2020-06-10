@@ -4,7 +4,6 @@
   :dependencies [
                  [org.clojure/clojure "1.10.1"]
                  [clj-http "3.10.0"]
-                 [com.datomic/datomic-free "0.9.5656"]
                  [com.fzakaria/slf4j-timbre "0.3.14"]
                  [com.github.javafaker/javafaker "0.16"]
                  [com.taoensso/timbre "4.10.0"]
